@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+    <div class="weather-info" id="weatherInfo">
+        <!-- Weather information will be displayed here dynamically -->
+        <h3>Weather in  {{ weather_data.cityName}} </h3>
+        <p>Temperature: {{ weather_data.temperature}}  &#8451;</p>
+        <p>Description: {{ weather_data.weatherDescription}}</p>
+    </div>
+    <button class="btn" type="submit" onclick="redirectToAnotherPage()">Check another City</button>
+     </div>
+
+     <script type="text/javascript">
+        function redirectToAnotherPage() {
+            // Perform the redirect
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
